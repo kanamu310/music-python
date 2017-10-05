@@ -2,6 +2,7 @@ import sys
 import wave
 import struct
 import numpy as np
+import datetime
 from pylab import *
 
 def openfile(argv):
@@ -17,7 +18,8 @@ def conversion(befor_music):
     return befor_list
 
 def save_wave(binwaves):
-    w = wave.Wave_write("output.wav")
+    now = datetime.datetime.now()
+    w = wave.Wave_write("{0}-{1}-{2}-{3}-{4}.wav".format(now.year,now.month,now.day,now.hour,now.minute))
     p = (1, 2, 8000, len(binwaves), 'NONE', 'not compressed')
     w.setparams(p)
     w.writeframes(binwaves)

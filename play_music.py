@@ -18,7 +18,7 @@ if __name__ == "__main__" :
 
     for f in freqList:
         data = test.createSinWave(1.0, f, 8000.0, 2.0)
-        test.play(data, 8000, 16)
+        #test.play(data, 8000, 16)
         datas += data
 
     File_open.save_wave(datas)

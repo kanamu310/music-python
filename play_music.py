@@ -1,5 +1,3 @@
-#import wave
-#import pyaudio
 import struct
 import numpy as np
 from pylab import *
@@ -7,6 +5,7 @@ from pylab import *
 #オリジナルモジュール
 import File_open
 import test
+import mymovie
 
 if __name__ == "__main__" :
     freqList = File_open.conversion(File_open.openfile(sys.argv[1]))
@@ -21,4 +20,10 @@ if __name__ == "__main__" :
         #test.play(data, 8000, 16)
         datas += data
 
-    File_open.save_wave(datas)
+    fname=File_open.save_wave(datas)
+    times = mymovie.main("{0}.wav".format(fname),"{0}.mp4".format(fname))
+
+    print("{0}.wavを出力".format(fname))
+    print("{0}.mp4を出力".format(fname))
+
+    print("Time[s]:{0}".format(times))

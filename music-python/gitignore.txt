@@ -1,3 +1,5 @@
 __pycache__/
 *wav
 music-python
+*.mp4
+*.wav

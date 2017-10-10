@@ -21,9 +21,9 @@ if __name__ == "__main__" :
         datas += data
 
     fname=File_open.save_wave(datas)
-    times = mymovie.main("{0}.wav".format(fname),"{0}.mp4".format(fname))
-
     print("{0}.wavを出力".format(fname))
+    times = mymovie.main("{0}.wav".format(fname),"{0}.mp4".format(fname))
     print("{0}.mp4を出力".format(fname))
-
+    mymovie.upload(fname)
+    print("{0}.mp4をyoutubeにアップロード".format(fname))
     print("Time[s]:{0}".format(times))

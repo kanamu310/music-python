@@ -9,6 +9,9 @@ def LengthMusic(wavefile):
     times = int(wf.getnframes()) / wf.getframerate()
     return times
 
+def upload(fname):
+    subprocess.run(["sh","youtube-upload.sh","{0}.mp4".format(fname),"{0}".format(fname)])
+
 def main(wavefile,fname):
     times = LengthMusic(wavefile)
     MovieMake(wavefile,fname,times)

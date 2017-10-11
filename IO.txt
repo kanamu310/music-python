@@ -1,0 +1,10 @@
+$ python .\play_music.py .\music.txt
+
+2017-10-11-10-11.wavを出力
+ffmpeg version N-87353-g183fd30 Copyright (c) 2000-2017 the FFmpeg developers
+　　　　　　　　　　　　　　　--(略)--
+2017-10-11-10-11.mp4を出力
+Uploading file...
+Video id 'UtVAY-_Q8Nc' was successfully uploaded.
+2017-10-11-10-11.mp4をyoutubeにアップロード
+Time[s]:26.0

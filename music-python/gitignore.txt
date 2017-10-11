@@ -1,5 +1,7 @@
 __pycache__/
-*wav
+.cache*
+*.wav
 music-python
 *.mp4
 *.wav
+*.json

@@ -6,9 +6,12 @@ from pylab import *
 import File_open
 import create_sound
 import mymovie
+import composition
 
 if __name__ == "__main__":
-    freqList = File_open.conversion(File_open.openfile(sys.argv[1]))
+    composition.composition()
+    #sys.argv[1])
+    freqList = File_open.conversion(File_open.openfile('music.txt'))
     datas = b""
     count = len(freqList)
     del freqList[count-1]

@@ -10,12 +10,12 @@ def createSinWave (A, f0, fs, length):
     for n in np.arange(length * fs):
         s = A * np.sin(2 * np.pi * f0 * n / fs)
 
-        if s > 1.0: s = 1.0
+        if s >  1.0: s = 1.0
         if s < -1.0: s = -1.0
+
         data.append(s)
 
     data = [int(x * 32767.0) for x in data]
-
     data = struct.pack("h" * len(data), *data)
 
     # list に * をつけると引数展開? されるらしい
@@ -30,9 +30,9 @@ def play(data, fs, bit):
             channels=1,
             rate=int(fs),
             output=True)
-
     chunk = 1024
     sp = 0
+
     buffer = data[sp:sp+chunk]
     while buffer != b'':
         stream.write(buffer)
